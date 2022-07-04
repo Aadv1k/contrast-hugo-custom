@@ -18,7 +18,7 @@
 
 <header>
   {{ if not (gt (len .Site.Menus) 1) }}
-    <a href="{{ .Site.BaseURL }}" class="title">{{ .Site.Title }}</a>
+  <a href="{{ .Site.BaseURL }}" class="title">{{ .Site.Title }}</a>
   {{ end }}
   {{ range $menu, $items := .Site.Menus }}
     <nav>

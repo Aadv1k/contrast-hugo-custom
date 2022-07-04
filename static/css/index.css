@@ -1,15 +1,11 @@
-@font-face {
-  font-family: "PT Sans";
-  src: local("PT Sans"), local("PTSans-Regular"), url("../fonts/PTSans-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Ultra&display=swap');
+
+
+:root {
+  --heading-fnt: 'Ultra', 'Impact', serif;
+  --main-font: 'PT Serif', Georgia, 'Times New Roman', Times, serif;;
 }
-@font-face {
-  font-family: "PT Sans";
-  src: local("PT Sans Bold"), local("PTSans-Bold"), url("../fonts/PTSans-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-}
+
 
 html {
   background: #d3d4db;
@@ -18,22 +14,52 @@ html {
   padding: 0 calc(38% - 21em);
 }
 
+
+ul > li {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+ul > li  * {
+  padding: 0;
+  margin: 0;
+}
+
+ul > li > a {
+  font-weight: 100;
+  font-family: var(--heading-fnt);
+  color: #212228;
+  opacity: 0.8;
+}
+
+ul.archive {
+  padding: 0;
+  margin: 0;
+}
+
+ul > li > time {
+  color: #909194;
+  font-size: .9em;
+  margin: 0!important;
+}
+
+
 body {
   background: #ffffff;
   color: #212228;
-  font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif;
+  font-family: var(--main-font);
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
   min-height: 100vh;
   box-shadow: 0 0 0.3em #c5c7cf;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
+
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
+  font-weight: 200;
+  font-family: var(--heading-fnt);
+  opacity: 0.9;
 }
 
 b, strong, th {
@@ -42,6 +68,7 @@ b, strong, th {
 
 p {
   text-align: justify;
+  opacity: 0.9;
 }
 
 a {
@@ -158,10 +185,16 @@ nav a {
 
 @media (prefers-color-scheme: dark) {
   html, body, body > header, body > footer {
-    background: #212228;
-    color: #ffffff;
+    background: #252526;
+    color: #eeffff;
     box-shadow: 0 0 0 1px #33353e;
   }
+
+
+    ul > li > a {
+      color: #eeffff;
+    }
+
 }
 
 @media (min-width: 32em) {
