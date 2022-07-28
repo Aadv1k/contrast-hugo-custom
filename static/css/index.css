@@ -1,17 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Ultra&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap');
 
 
 :root {
   --heading-fnt: 'Montserrat', sans-serif;
-  --main-font: 'PT Serif', Georgia, 'Times New Roman', serif;
+  --main-font: 'EB Garamond', Georgia, 'Times New Roman', serif;
 }
 
 
 html {
   background: #d3d4db;
   font-size: 16px;
-  font-size: calc(0.8rem + 0.3vw);
   padding: 0 calc(38% - 21em);
 }
 
@@ -46,11 +45,11 @@ ul > li > time {
 
 
 body {
-  background: #ffffff;
-  color: #212228;
+  background: #f9f9f9;
+  color: #000000;
   font-family: var(--main-font);
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   margin: 0;
   min-height: 100vh;
   box-shadow: 0 0 0.3em #c5c7cf;
